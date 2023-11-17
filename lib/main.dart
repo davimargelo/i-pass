@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       // Load isDarkMode value from SharedPreferences
-      isDarkMode = prefs.getBool('isDarkMode') ?? false;
+      isDarkMode = prefs.getBool('isDarkMode') ?? isDarkMode;
     });
   }
 
